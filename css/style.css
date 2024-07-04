@@ -1,0 +1,32 @@
+:root{
+    --header-background-color: #1B72E8;
+    --aside-background-color: lightyellow;
+}
+*{
+    color: black;
+}
+.box{
+    background-color: red;
+    height: 50px;
+}
+.box-bigger{
+    background-color: yellow;
+    height: 50px;
+}
+header{
+    min-height: 70px;
+    background-color: var(--header-background-color);
+}
+.custom-sidebar {
+    max-width: 150px;
+    height: calc(100vh - 70px);
+    overflow-y: auto; 
+    position: fixed; 
+}
+.main-content {
+    margin-left: 150px; 
+}
+.btm-link-sidebar{
+    position: absolute;
+    bottom: 0;
+}
