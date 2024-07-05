@@ -11,43 +11,58 @@
     <!--link my css-->
     <link rel="stylesheet" href="./css/style.css">
     <!--link fontawesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <!--nav bar con logo/barra di ricerca/bottoni utility-->
     <header>
         <nav class="container-fluid">
-            <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-2">
-                    <div>
-                        immagine logo
+            <div class="row d-flex align-items-center">
+                <div class="col-2">
+                    <div class="desktop-logo d-lg-block d-sm-none">
+                        <img src="img/logo.svg" alt="logo-desktop">
+                    </div>
+                    <div class="mobile-logo d-lg-none d-sm-block">
+                        <img src="img/mobile-logo.png" alt="logo-mobile">
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-9 col-sm-9">
+                <div class="col-8 col py-3">
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
                     </form>
                 </div>
-                <div class="col-lg-2 col-md-1 col-sm-1 d-flex justify-content-between">
+                <div class="col-2 d-flex justify-content-between">
 
                     <div class="d-lg-block d-sm-none px-2">
-                        <button></button>
+                        <button class="border border-0 bg-transparent">
+                            <span><i class="fa-solid fa-list-ul text-secondary"></i></span>
+                        </button>
                     </div>
                     <div class="d-lg-block d-sm-none px-2">
-                        <button></button>
+                        <button class="border border-0 bg-transparent">
+                            <span><i class="fa-solid fa-circle-question text-secondary"></i></span>
+                        </button>
                     </div>
                     <div class="d-lg-block d-sm-none px-2">
-                        <button></button>
+                        <button class="border border-0 bg-transparent">
+                            <span><i class="fa-solid fa-ellipsis-vertical text-secondary"></i></span>
+                        </button>
                     </div>
                     <div class="dropdown">
-                        <button class="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-
+                        <button class="border border-0 bg-transparent" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <span>
+                                <i class="fa-solid fa-bell text-warning"></i>
+                            </span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">Profilo</a></li>
+                            <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
                         </ul>
                     </div>
 
@@ -55,38 +70,446 @@
             </div>
         </nav>
     </header>
-    
-    <div class="d-flex">
-    <!--aside con tre link in alto home/stats/signals e in fondo impostazioni admin-->
-        <nav class=" custom-sidebar p-3">
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"><span><i class="fa-solid fa-house"></i></span>Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><span><i class="fa-solid fa-chart-simple"></i></span>Stats</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><span><i class="fa-solid fa-signal"></i></span>signals</a>
-                </li>
-                <li class="nav-item mt-auto btm-link-sidebar">
-                    <a class="nav-link" href="#"><span><i class="fa-solid fa-gear"></i></span>Admin</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="flex-grow-1 main-content p-3">
-    <!-- Main content -->
-    <!--prima sezione con colonne bottoni/ numero studenti/ nuovo studente con bottone-->
-             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6"><h1>Main Content Area</h1></div>
-                    <div class="col-lg-3"><h1>Main Content Area</h1></div>
-                    <div class="col-lg-3"><h1>Main Content Area</h1></div>
+    <section class="d-flex">
+        <aside>
+            <nav class="nav-aside-cont">
+                <ul class="px-2">
+                    <li class="list-group-item">
+                        <a href="index.html" aria-label="Home" style="display: flex; align-items: center; text-decoration: none;">
+                            <i class="fa-solid fa-house" style="margin-right: 8px;"></i>
+                            <span class="d-lg-block d-sm-none">Home</span>
+                        </a>
+                    </li>
+                    <li class="list-group-item py-3">
+                        <a href="index.html" aria-label="Home" style="display: flex; align-items: center; text-decoration: none;">
+                            <i class="fa-solid fa-chart-simple" style="margin-right: 8px;"></i>
+                            <span class="d-lg-block d-sm-none">Stats</span>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="index.html" aria-label="Home" style="display: flex; align-items: center; text-decoration: none;">
+                            <i class="fa-solid fa-signal" style="margin-right: 8px;"></i>
+                            <span class="d-lg-block d-sm-none">Signals</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="bottom-item ">
+                    <li class="list-group-item">
+                        <div>
+                            <a href="index.html" aria-label="Home" style="display: flex; align-items: center; text-decoration: none;">
+                                <i class="fa-solid fa-gear" style="margin-right: 8px;"></i>
+                                <span class="d-lg-block d-sm-none">Admin</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="bg-light main-container">
+
+            <div class="container-fluid">
+                <div class="row upper-section d-flex align-items-center">
+                    <div class="col-lg-5 col-md-5 col-sm-12 d-flex flex-wrap">
+                        <h2>Boolean</h2>
+                        <div class="button-container py-1 px-1">
+                            <button class="btn btn-primary">Piano blaze</button>
+                        </div>
+                        <div class="button-container py-1 px-1">
+                            <button class="btn btn-primary">3 app</button>
+                        </div>
+                        <div class="py-1 px-1">
+                            >>
+                        </div>
+                        <div>
+                            <button class="button-container py-1 px-1 d-lg-none d-sm-block">
+                                +
+                            </button>
+                        </div>
+                        <div class="button-container py-1 px-1 d-lg-block d-sm-none">
+                            <button class="btn btn-primary">Boolean mobile app</button>
+                        </div>
+                        <div class="button-container py-1 px-1 d-lg-block d-sm-none">
+                            <button class="btn btn-primary">Boolean web app</button>
+                        </div>
+                        <div class="button-container py-1 px-1 d-lg-block d-sm-none">
+                            <button class="btn btn-primary">Boolean blog app</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <p>Studenti online negli ultimi 30 minuti</p>
+                        <h2>125</h2>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <p>Nuovo Studente</p>
+                        <button></button>
+                    </div>
                 </div>
-             </div>
-            
+                <main class="d-flex py-4">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-12">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <h2>Prossime Classi</h2>
+                                                </li>
+                                            </ul>
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Name</th>
+                                                        <th scope="col"> <span class="d-md-block d-sm-none">Data inizio</span></th>
+                                                        <th scope="col "><span class="d-md-block d-sm-none">ROI</span></th>
+                                                        <th scope="col">Stato</th>
+                                                        <th scope="col">Azioni</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <span></span>
+                                                            Classe 75
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-md-block d-sm-none">
+                                                                15 Feb 2021
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-md-block d-sm-none">
+                                                                20%
+                                                            </div>  
+                                                        </td>
+                                                        <td>
+                                                            <div class="border rounded-2 w-50 text-center bg-success text-light">Done</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div><button class="border-1 rounded-1 mx-1 bg-transparent"><i class="fa-solid fa-pen"></i></button></div>
+                                                                <div><button class="border-1 rounded-1 bg-transparent"><i class="fa-solid fa-trash"></i></button></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span></span>
+                                                            Classe 76
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-md-block d-sm-none">
+                                                                15 Feb 2021
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-md-block d-sm-none">
+                                                                20%
+                                                            </div>  
+                                                        </td>
+                                                        <td>
+                                                            <div class="border rounded-2 w-50 text-center bg-success text-light">Done</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div><button class="border-1 rounded-1 mx-1 bg-transparent"><i class="fa-solid fa-pen"></i></button></div>
+                                                                <div><button class="border-1 rounded-1 bg-transparent"><i class="fa-solid fa-trash"></i></button></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span></span>
+                                                            Classe 77
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-md-block d-sm-none">
+                                                                15 Feb 2021
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-md-block d-sm-none">
+                                                                20%
+                                                            </div>  
+                                                        </td>
+                                                        <td>
+                                                            <div class="border rounded-2 w-50 text-center bg-warning text-light">process</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div><button class="border-1 rounded-1 mx-1 bg-transparent"><i class="fa-solid fa-pen"></i></button></div>
+                                                                <div><button class="border-1 rounded-1 bg-transparent"><i class="fa-solid fa-trash"></i></button></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span></span>
+                                                            Classe 78
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-md-block d-sm-none">
+                                                                15 Feb 2021
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-md-block d-sm-none">
+                                                                20%
+                                                            </div>  
+                                                        </td>
+                                                        <td>
+                                                            <div class="border rounded-2 w-50 text-center bg-success text-light">Done</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div><button class="border-1 rounded-1 mx-1 bg-transparent"><i class="fa-solid fa-pen"></i></button></div>
+                                                                <div><button class="border-1 rounded-1 bg-transparent"><i class="fa-solid fa-trash"></i></button></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span></span>
+                                                            Classe 79
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-md-block d-sm-none">
+                                                                15 Feb 2021
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-md-block d-sm-none">
+                                                                20%
+                                                            </div>  
+                                                        </td>
+                                                        <td>
+                                                            <div class="border rounded-2 w-50 text-center bg-danger text-light">failed</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div><button class="border-1 rounded-1 mx-1 bg-transparent"><i class="fa-solid fa-pen"></i></button></div>
+                                                                <div><button class="border-1 rounded-1 bg-transparent"><i class="fa-solid fa-trash"></i></button></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span></span>
+                                                            Classe 80
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-md-block d-sm-none">
+                                                                15 Feb 2021
+                                                            </div>
+                                                        </td>
+                                                        <td >
+                                                            <div class="d-md-block d-sm-none">
+                                                                20%
+                                                            </div>  
+                                                        </td>
+                                                        <td>
+                                                            <div class="border rounded-2 w-50 text-center bg-success text-light">Done</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex"> 
+                                                                <div><button class="border-1 rounded-1 mx-1 bg-transparent"><i class="fa-solid fa-pen"></i></button></div>
+                                                                <div><button class="border-1 rounded-1 bg-transparent"><i class="fa-solid fa-trash"></i></button></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span></span>
+                                                            Classe 81
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-md-block d-sm-none">
+                                                                15 Feb 2021
+                                                            </div>
+                                                        </td>
+                                                        <td class="">
+                                                            <div class="d-md-block d-sm-none">
+                                                                20%
+                                                            </div>  
+                                                        </td>
+                                                        <td>
+                                                            <div class="border rounded-2 w-50 text-center bg-danger text-light">failed</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div><button class="border-1 rounded-1 mx-1 bg-transparent"><i class="fa-solid fa-pen"></i></button></div>
+                                                                <div><button class="border-1 rounded-1 bg-transparent"><i class="fa-solid fa-trash"></i></button></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span></span>
+                                                            Classe 82
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-md-block d-sm-none">
+                                                                15 Feb 2021
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-md-block d-sm-none">
+                                                                20%
+                                                            </div>   
+                                                        </td>
+                                                        <td>
+                                                            <div class="border rounded-2 w-50 text-center bg-success text-light">Done</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <div><button class="border-1 rounded-1 mx-1 bg-transparent"><i class="fa-solid fa-pen"></i></button></div>
+                                                                <div><button class="border-1 rounded-1 bg-transparent"><i class="fa-solid fa-trash"></i></button></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="card my-4">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <h2>F.A.Q.</h2>
+                                                </li>
+                                            </ul>
+                                            <div class="accordion" id="accordion">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button " type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                            aria-expanded="true" aria-controls="collapseOne">
+                                                            Come aggiungere un nuovo studente?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordion">
+                                                        <div class="accordion-body">
+                                                            <p>
+                                                                Premi sul "+" in alto nella sezione blu.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                            aria-expanded="false" aria-controls="collapseTwo">
+                                                            Come posso accedere alle informazioni del mio account?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordion">
+                                                        <div class="accordion-body">
+                                                            <p>
+                                                                premi sull'icona della campanella
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                            aria-expanded="false" aria-controls="collapseThree">
+                                                            Posso usare questa dashboard da mobile?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                                        data-bs-parent="#accordion">
+                                                        <div class="accordion-body">
+                                                            <p>
+                                                                certo che si.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">
+                                                    <h2>Todo</h2>
+                                                </li>
+                                            </ul>
+                                            <ul class="list-group list-group-flush border rounded-3 my-3 mx-3">
+                                                <li class="list-group-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="defaultCheck1">
+                                                        <label class="form-check-label" for="defaultCheck1">
+                                                            Kickoff nuove classi
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="defaultCheck1">
+                                                        <label class="form-check-label" for="defaultCheck1">
+                                                            Lezione su Bootstrap 5 in classe #75
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="defaultCheck1">
+                                                        <label class="form-check-label" for="defaultCheck1">
+                                                            Controllare username github studenti
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="card my-4">
+                                            <div class="border rounded-3 my-3 mx-3">
+                                                <img src="img/stats.jpeg" class="img-fluid" alt="stats">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">
+                                                        Utenti Attivi
+                                                    </h5>
+                                                    <p class="card-text">
+                                                        Lista degli utenti attivi in piattaforma nell'ultimo mese
+                                                    </p>
+                                                </div>
+                                                <ul class="list-group list list-group-flush">
+                                                    <li class="list-group-item">Gennaio:1200</li>
+                                                    <li class="list-group-item">Febbaio:800</li>
+                                                    <li class="list-group-item">Marzo:1500</li>
+                                                    <li class="list-group-item"><a href="#">Visualizza report
+                                                            approfondito</a></li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </main>
+            </div>
         </div>
-    </div>
+
+    </section>
+
+
     <!--sezione principale con colonne suddivise/ prima colonna con tabella e bottoni/ seconda colonna checkbox/ terza colonna con immagine e dettagli/ quarta colonna con le F.A.Q. e accordion-->
     <!--link javascript per bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

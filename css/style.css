@@ -1,10 +1,19 @@
 :root{
-    --header-background-color: #1B72E8;
-    --aside-background-color: lightyellow;
+   --aside-min-width:50px;
 }
 *{
     color: black;
 }
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.mobile-logo>img{
+    width: 50px;
+    height: 50px;
+}
+
 .box{
     background-color: red;
     height: 50px;
@@ -15,18 +24,36 @@
 }
 header{
     min-height: 70px;
-    background-color: var(--header-background-color);
 }
-.custom-sidebar {
-    max-width: 150px;
+aside{
+    min-width: 50px;
     height: calc(100vh - 70px);
-    overflow-y: auto; 
-    position: fixed; 
 }
-.main-content {
-    margin-left: 150px; 
+.nav-aside-cont{
+    min-width: 100px;
+    position: relative;
+    height: calc(100vh - 70px);
+    background-image: url(img\sidebar-bg.png);
 }
-.btm-link-sidebar{
+.upper-section{
+    background-color: #1B72E8;
+    min-height: 150px;
+}
+.btn-primary{
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 10px;
+    background-color: #165BBA;
+}
+.main-container{
+    width: calc(100% - var(--aside-min-width));
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    
+}
+.bottom-item{
     position: absolute;
     bottom: 0;
+    right: 20px;
 }
