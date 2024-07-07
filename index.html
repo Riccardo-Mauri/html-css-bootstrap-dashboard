@@ -29,7 +29,7 @@
                         <img src="img/mobile-logo.png" alt="logo-mobile">
                     </div>
                 </div>
-                <div class="col-8 col py-3">
+                <div class="col-8 py-3">
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
 
@@ -70,37 +70,67 @@
             </div>
         </nav>
     </header>
-    <section class="d-flex">
+    <main class="d-flex">
         <aside>
-            <nav class="nav-aside-cont">
+            <!--link desktop scompaiono in versione tablet in giu-->
+            <nav class="nav-aside-cont d-lg-block d-sm-none py-3">
                 <ul class="px-2">
-                    <li class="list-group-item">
-                        <a href="index.html" aria-label="Home" style="display: flex; align-items: center; text-decoration: none;">
-                            <i class="fa-solid fa-house" style="margin-right: 8px;"></i>
-                            <span class="d-lg-block d-sm-none">Home</span>
+                    <li class="list-group-item w-100 hoverlink text-center">
+                        <a href="#" class="text-decoration-none text-light">
+                            <i class="fa-solid fa-house text-light"></i>
+                            Home
                         </a>
                     </li>
-                    <li class="list-group-item py-3">
-                        <a href="index.html" aria-label="Home" style="display: flex; align-items: center; text-decoration: none;">
-                            <i class="fa-solid fa-chart-simple" style="margin-right: 8px;"></i>
-                            <span class="d-lg-block d-sm-none">Stats</span>
+                    <li class="list-group-item my-3 w-100 hoverlink text-center">
+                        <a href="#" class="text-decoration-none text-light">
+                            <i class="fa-solid fa-chart-simple text-light"></i>
+                            Stats
                         </a>
                     </li>
-                    <li class="list-group-item">
-                        <a href="index.html" aria-label="Home" style="display: flex; align-items: center; text-decoration: none;">
-                            <i class="fa-solid fa-signal" style="margin-right: 8px;"></i>
-                            <span class="d-lg-block d-sm-none">Signals</span>
+                    <li class="list-group-item w-100 hoverlink text-center">
+                        <a href="#" class="text-decoration-none text-light">
+                            <i class="fa-solid fa-signal text-light"></i>
+                            Signals
                         </a>
                     </li>
                 </ul>
-                <ul class="bottom-item ">
-                    <li class="list-group-item">
-                        <div>
-                            <a href="index.html" aria-label="Home" style="display: flex; align-items: center; text-decoration: none;">
-                                <i class="fa-solid fa-gear" style="margin-right: 8px;"></i>
-                                <span class="d-lg-block d-sm-none">Admin</span>
-                            </a>
-                        </div>
+                <ul class="bottom-item px-2 w-100">
+                    <li class="list-group-item w-100 hoverlink text-center">
+                        <a href="#" class="text-decoration-none text-light">
+                            <i class="fa-solid fa-gear text-light"></i>
+                            Admin
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!--link tablet e mobile-->
+            <nav class="nav-aside-cont d-lg-none d-sm-block py-5">
+                <ul class="px-2">
+                    <li class="list-group-item w-100 hoverlink text-center">
+                        <a href="#" class="text-decoration-none text-light">
+                            <i class="fa-solid fa-house text-light"></i>
+
+                        </a>
+                    </li>
+                    <li class="list-group-item my-3 w-100 hoverlink text-center">
+                        <a href="#" class="text-decoration-none text-light">
+                            <i class="fa-solid fa-chart-simple text-light"></i>
+
+                        </a>
+                    </li>
+                    <li class="list-group-item w-100 hoverlink text-center">
+                        <a href="#" class="text-decoration-none text-light">
+                            <i class="fa-solid fa-signal text-light"></i>
+
+                        </a>
+                    </li>
+                </ul>
+                <ul class="bottom-item px-2 w-100">
+                    <li class="list-group-item w-100 hoverlink text-center">
+                        <a href="#" class="text-decoration-none text-light">
+                            <i class="fa-solid fa-gear text-light"></i>
+
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -108,8 +138,22 @@
         <div class="bg-light main-container">
 
             <div class="container-fluid">
-                <div class="row upper-section d-flex align-items-center">
-                    <div class="col-lg-5 col-md-5 col-sm-12 d-flex flex-wrap">
+                <div class="row upper-section d-flex justify-content-between">
+                    <div class="col-lg-3 col-md-3 col-sm-12 d-flex py-4 order-md-3">
+                        <div class="">
+                            <p class="text-light">Nuovo Studente</p>
+                        </div>
+                        <div class="px-3">
+                            <button class="bg-transparent border-2 rounded-1 border-white">
+                                <i class="fa-solid fa-plus text-light"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 py-4 order-md-2">
+                        <p class="text-light">Studenti online negli ultimi 30 minuti</p>
+                        <h2 class="text-light">125</h2>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 d-flex flex-wrap py-4  text-light">
                         <h2>Boolean</h2>
                         <div class="button-container py-1 px-1">
                             <button class="btn btn-primary">Piano blaze</button>
@@ -118,11 +162,11 @@
                             <button class="btn btn-primary">3 app</button>
                         </div>
                         <div class="py-1 px-1">
-                            >>
+                            <strong><span class="text-light">>></span></strong>
                         </div>
-                        <div>
-                            <button class="button-container py-1 px-1 d-lg-none d-sm-block">
-                                +
+                        <div class="button-container py-1 px-1">
+                            <button class="btn btn-primary py-1 px-1 d-lg-none d-sm-block">
+                                <i class="fa-solid fa-plus"></i>
                             </button>
                         </div>
                         <div class="button-container py-1 px-1 d-lg-block d-sm-none">
@@ -135,16 +179,9 @@
                             <button class="btn btn-primary">Boolean blog app</button>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <p>Studenti online negli ultimi 30 minuti</p>
-                        <h2>125</h2>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-12">
-                        <p>Nuovo Studente</p>
-                        <button></button>
-                    </div>
                 </div>
-                <main class="d-flex py-4">
+                <!--sezione principale con colonne suddivise/ prima colonna con tabella e bottoni/ seconda colonna checkbox/ terza colonna con immagine e dettagli/ quarta colonna con le F.A.Q. e accordion-->
+                <section class="d-flex py-4">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-lg-8 col-md-12">
@@ -152,25 +189,30 @@
                                     <div class="col-12">
                                         <div class="card">
                                             <ul class="list-group">
-                                                <li class="list-group-item">
+                                                <li class="list-group-item bg-light">
                                                     <h2>Prossime Classi</h2>
                                                 </li>
                                             </ul>
                                             <table class="table">
                                                 <thead>
                                                     <tr>
-                                                        <th scope="col">Name</th>
-                                                        <th scope="col"> <span class="d-md-block d-sm-none">Data inizio</span></th>
-                                                        <th scope="col "><span class="d-md-block d-sm-none">ROI</span></th>
-                                                        <th scope="col">Stato</th>
-                                                        <th scope="col">Azioni</th>
+                                                        <th>Name</th>
+                                                        <th> <span class="d-md-block d-sm-none">Data
+                                                                inizio</span></th>
+                                                        <th><span class="d-md-block d-sm-none">ROI</span>
+                                                        </th>
+                                                        <th>Stato</th>
+                                                        <th>Azioni</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td>
-                                                            <span></span>
-                                                            Classe 75
+                                                            <span class="class-avatar-cont bg-white">
+                                                                <img src="./img/class-avatar.jpg" alt="class-avatar">
+                                                            </span>
+                                                            <span>Classe 75</span>
+
                                                         </td>
                                                         <td>
                                                             <div class="d-md-block d-sm-none">
@@ -180,22 +222,31 @@
                                                         <td>
                                                             <div class="d-md-block d-sm-none">
                                                                 20%
-                                                            </div>  
+                                                            </div>
                                                         </td>
                                                         <td>
-                                                            <div class="border rounded-2 w-50 text-center bg-success text-light">Done</div>
+                                                            <div
+                                                                class="border rounded-2 w-50 text-center bg-success text-light">
+                                                                Done</div>
                                                         </td>
                                                         <td>
                                                             <div class="d-flex">
-                                                                <div><button class="border-1 rounded-1 mx-1 bg-transparent"><i class="fa-solid fa-pen"></i></button></div>
-                                                                <div><button class="border-1 rounded-1 bg-transparent"><i class="fa-solid fa-trash"></i></button></div>
+                                                                <div><button
+                                                                        class="border-1 rounded-1 mx-1 bg-transparent"><i
+                                                                            class="fa-solid fa-pen"></i></button></div>
+                                                                <div><button
+                                                                        class="border-1 rounded-1 bg-transparent"><i
+                                                                            class="fa-solid fa-trash"></i></button>
+                                                                </div>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <span></span>
-                                                            Classe 76
+                                                            <span class="class-avatar-cont bg-white">
+                                                                <img src="./img/class-avatar.jpg" alt="class-avatar">
+                                                            </span>
+                                                            <span>Classe 76</span>
                                                         </td>
                                                         <td>
                                                             <div class="d-md-block d-sm-none">
@@ -205,22 +256,31 @@
                                                         <td>
                                                             <div class="d-md-block d-sm-none">
                                                                 20%
-                                                            </div>  
+                                                            </div>
                                                         </td>
                                                         <td>
-                                                            <div class="border rounded-2 w-50 text-center bg-success text-light">Done</div>
+                                                            <div
+                                                                class="border rounded-2 w-50 text-center bg-success text-light">
+                                                                Done</div>
                                                         </td>
                                                         <td>
                                                             <div class="d-flex">
-                                                                <div><button class="border-1 rounded-1 mx-1 bg-transparent"><i class="fa-solid fa-pen"></i></button></div>
-                                                                <div><button class="border-1 rounded-1 bg-transparent"><i class="fa-solid fa-trash"></i></button></div>
+                                                                <div><button
+                                                                        class="border-1 rounded-1 mx-1 bg-transparent"><i
+                                                                            class="fa-solid fa-pen"></i></button></div>
+                                                                <div><button
+                                                                        class="border-1 rounded-1 bg-transparent"><i
+                                                                            class="fa-solid fa-trash"></i></button>
+                                                                </div>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <span></span>
-                                                            Classe 77
+                                                            <span class="class-avatar-cont bg-white">
+                                                                <img src="./img/class-avatar.jpg" alt="class-avatar">
+                                                            </span>
+                                                            <span>Classe 77</span>
                                                         </td>
                                                         <td>
                                                             <div class="d-md-block d-sm-none">
@@ -230,22 +290,31 @@
                                                         <td>
                                                             <div class="d-md-block d-sm-none">
                                                                 20%
-                                                            </div>  
+                                                            </div>
                                                         </td>
                                                         <td>
-                                                            <div class="border rounded-2 w-50 text-center bg-warning text-light">process</div>
+                                                            <div
+                                                                class="border rounded-2 w-50 text-center bg-warning text-light">
+                                                                process</div>
                                                         </td>
                                                         <td>
                                                             <div class="d-flex">
-                                                                <div><button class="border-1 rounded-1 mx-1 bg-transparent"><i class="fa-solid fa-pen"></i></button></div>
-                                                                <div><button class="border-1 rounded-1 bg-transparent"><i class="fa-solid fa-trash"></i></button></div>
+                                                                <div><button
+                                                                        class="border-1 rounded-1 mx-1 bg-transparent"><i
+                                                                            class="fa-solid fa-pen"></i></button></div>
+                                                                <div><button
+                                                                        class="border-1 rounded-1 bg-transparent"><i
+                                                                            class="fa-solid fa-trash"></i></button>
+                                                                </div>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <span></span>
-                                                            Classe 78
+                                                            <span class="class-avatar-cont bg-white">
+                                                                <img src="./img/class-avatar.jpg" alt="class-avatar">
+                                                            </span>
+                                                            <span>Classe 78</span>
                                                         </td>
                                                         <td>
                                                             <div class="d-md-block d-sm-none">
@@ -255,22 +324,31 @@
                                                         <td>
                                                             <div class="d-md-block d-sm-none">
                                                                 20%
-                                                            </div>  
+                                                            </div>
                                                         </td>
                                                         <td>
-                                                            <div class="border rounded-2 w-50 text-center bg-success text-light">Done</div>
+                                                            <div
+                                                                class="border rounded-2 w-50 text-center bg-success text-light">
+                                                                Done</div>
                                                         </td>
                                                         <td>
                                                             <div class="d-flex">
-                                                                <div><button class="border-1 rounded-1 mx-1 bg-transparent"><i class="fa-solid fa-pen"></i></button></div>
-                                                                <div><button class="border-1 rounded-1 bg-transparent"><i class="fa-solid fa-trash"></i></button></div>
+                                                                <div><button
+                                                                        class="border-1 rounded-1 mx-1 bg-transparent"><i
+                                                                            class="fa-solid fa-pen"></i></button></div>
+                                                                <div><button
+                                                                        class="border-1 rounded-1 bg-transparent"><i
+                                                                            class="fa-solid fa-trash"></i></button>
+                                                                </div>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <span></span>
-                                                            Classe 79
+                                                            <span class="class-avatar-cont bg-white">
+                                                                <img src="./img/class-avatar.jpg" alt="class-avatar">
+                                                            </span>
+                                                            <span>Classe 79</span>
                                                         </td>
                                                         <td>
                                                             <div class="d-md-block d-sm-none">
@@ -280,47 +358,65 @@
                                                         <td>
                                                             <div class="d-md-block d-sm-none">
                                                                 20%
-                                                            </div>  
+                                                            </div>
                                                         </td>
                                                         <td>
-                                                            <div class="border rounded-2 w-50 text-center bg-danger text-light">failed</div>
+                                                            <div
+                                                                class="border rounded-2 w-50 text-center bg-danger text-light">
+                                                                failed</div>
                                                         </td>
                                                         <td>
                                                             <div class="d-flex">
-                                                                <div><button class="border-1 rounded-1 mx-1 bg-transparent"><i class="fa-solid fa-pen"></i></button></div>
-                                                                <div><button class="border-1 rounded-1 bg-transparent"><i class="fa-solid fa-trash"></i></button></div>
+                                                                <div><button
+                                                                        class="border-1 rounded-1 mx-1 bg-transparent"><i
+                                                                            class="fa-solid fa-pen"></i></button></div>
+                                                                <div><button
+                                                                        class="border-1 rounded-1 bg-transparent"><i
+                                                                            class="fa-solid fa-trash"></i></button>
+                                                                </div>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <span></span>
-                                                            Classe 80
+                                                            <span class="class-avatar-cont bg-white">
+                                                                <img src="./img/class-avatar.jpg" alt="class-avatar">
+                                                            </span>
+                                                            <span>Classe 80</span>
                                                         </td>
                                                         <td>
                                                             <div class="d-md-block d-sm-none">
                                                                 15 Feb 2021
                                                             </div>
                                                         </td>
-                                                        <td >
+                                                        <td>
                                                             <div class="d-md-block d-sm-none">
                                                                 20%
-                                                            </div>  
+                                                            </div>
                                                         </td>
                                                         <td>
-                                                            <div class="border rounded-2 w-50 text-center bg-success text-light">Done</div>
+                                                            <div
+                                                                class="border rounded-2 w-50 text-center bg-success text-light">
+                                                                Done</div>
                                                         </td>
                                                         <td>
-                                                            <div class="d-flex"> 
-                                                                <div><button class="border-1 rounded-1 mx-1 bg-transparent"><i class="fa-solid fa-pen"></i></button></div>
-                                                                <div><button class="border-1 rounded-1 bg-transparent"><i class="fa-solid fa-trash"></i></button></div>
+                                                            <div class="d-flex">
+                                                                <div><button
+                                                                        class="border-1 rounded-1 mx-1 bg-transparent"><i
+                                                                            class="fa-solid fa-pen"></i></button></div>
+                                                                <div><button
+                                                                        class="border-1 rounded-1 bg-transparent"><i
+                                                                            class="fa-solid fa-trash"></i></button>
+                                                                </div>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <span></span>
-                                                            Classe 81
+                                                            <span class="class-avatar-cont bg-white">
+                                                                <img src="./img/class-avatar.jpg" alt="class-avatar">
+                                                            </span>
+                                                            <span>Classe 81</span>
                                                         </td>
                                                         <td>
                                                             <div class="d-md-block d-sm-none">
@@ -330,22 +426,31 @@
                                                         <td class="">
                                                             <div class="d-md-block d-sm-none">
                                                                 20%
-                                                            </div>  
+                                                            </div>
                                                         </td>
                                                         <td>
-                                                            <div class="border rounded-2 w-50 text-center bg-danger text-light">failed</div>
+                                                            <div
+                                                                class="border rounded-2 w-50 text-center bg-danger text-light">
+                                                                failed</div>
                                                         </td>
                                                         <td>
                                                             <div class="d-flex">
-                                                                <div><button class="border-1 rounded-1 mx-1 bg-transparent"><i class="fa-solid fa-pen"></i></button></div>
-                                                                <div><button class="border-1 rounded-1 bg-transparent"><i class="fa-solid fa-trash"></i></button></div>
+                                                                <div><button
+                                                                        class="border-1 rounded-1 mx-1 bg-transparent"><i
+                                                                            class="fa-solid fa-pen"></i></button></div>
+                                                                <div><button
+                                                                        class="border-1 rounded-1 bg-transparent"><i
+                                                                            class="fa-solid fa-trash"></i></button>
+                                                                </div>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <span></span>
-                                                            Classe 82
+                                                            <span class="class-avatar-cont bg-white">
+                                                                <img src="./img/class-avatar.jpg" alt="class-avatar">
+                                                            </span>
+                                                            <span>Classe 82</span>
                                                         </td>
                                                         <td>
                                                             <div class="d-md-block d-sm-none">
@@ -355,15 +460,22 @@
                                                         <td>
                                                             <div class="d-md-block d-sm-none">
                                                                 20%
-                                                            </div>   
+                                                            </div>
                                                         </td>
                                                         <td>
-                                                            <div class="border rounded-2 w-50 text-center bg-success text-light">Done</div>
+                                                            <div
+                                                                class="border rounded-2 w-50 text-center bg-success text-light">
+                                                                Done</div>
                                                         </td>
                                                         <td>
                                                             <div class="d-flex">
-                                                                <div><button class="border-1 rounded-1 mx-1 bg-transparent"><i class="fa-solid fa-pen"></i></button></div>
-                                                                <div><button class="border-1 rounded-1 bg-transparent"><i class="fa-solid fa-trash"></i></button></div>
+                                                                <div><button
+                                                                        class="border-1 rounded-1 mx-1 bg-transparent"><i
+                                                                            class="fa-solid fa-pen"></i></button></div>
+                                                                <div><button
+                                                                        class="border-1 rounded-1 bg-transparent"><i
+                                                                            class="fa-solid fa-trash"></i></button>
+                                                                </div>
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -374,7 +486,7 @@
                                     <div class="col-12">
                                         <div class="card my-4">
                                             <ul class="list-group">
-                                                <li class="list-group-item">
+                                                <li class="list-group-item bg-light">
                                                     <h2>F.A.Q.</h2>
                                                 </li>
                                             </ul>
@@ -440,7 +552,7 @@
                                     <div class="col-12">
                                         <div class="card">
                                             <ul class="list-group list-group-flush">
-                                                <li class="list-group-item">
+                                                <li class="list-group-item bg-light">
                                                     <h2>Todo</h2>
                                                 </li>
                                             </ul>
@@ -448,8 +560,8 @@
                                                 <li class="list-group-item">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" value=""
-                                                            id="defaultCheck1">
-                                                        <label class="form-check-label" for="defaultCheck1">
+                                                            id="defaultCheckOne">
+                                                        <label class="form-check-label" for="defaultCheckOne">
                                                             Kickoff nuove classi
                                                         </label>
                                                     </div>
@@ -457,8 +569,8 @@
                                                 <li class="list-group-item">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" value=""
-                                                            id="defaultCheck1">
-                                                        <label class="form-check-label" for="defaultCheck1">
+                                                            id="defaultCheckTwo">
+                                                        <label class="form-check-label" for="defaultCheckTwo">
                                                             Lezione su Bootstrap 5 in classe #75
                                                         </label>
                                                     </div>
@@ -466,8 +578,8 @@
                                                 <li class="list-group-item">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" value=""
-                                                            id="defaultCheck1">
-                                                        <label class="form-check-label" for="defaultCheck1">
+                                                            id="defaultCheckThree">
+                                                        <label class="form-check-label" for="defaultCheckThree">
                                                             Controllare username github studenti
                                                         </label>
                                                     </div>
@@ -491,8 +603,9 @@
                                                     <li class="list-group-item">Gennaio:1200</li>
                                                     <li class="list-group-item">Febbaio:800</li>
                                                     <li class="list-group-item">Marzo:1500</li>
-                                                    <li class="list-group-item"><a href="#">Visualizza report
-                                                            approfondito</a></li>
+                                                    <li class="list-group-item">
+                                                        <a href="#">Visualizza report approfondito</a>
+                                                    </li>
                                                 </ul>
 
                                             </div>
@@ -503,14 +616,14 @@
 
                         </div>
                     </div>
-                </main>
+                </section>
             </div>
         </div>
 
-    </section>
+    </main>
 
 
-    <!--sezione principale con colonne suddivise/ prima colonna con tabella e bottoni/ seconda colonna checkbox/ terza colonna con immagine e dettagli/ quarta colonna con le F.A.Q. e accordion-->
+
     <!--link javascript per bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
